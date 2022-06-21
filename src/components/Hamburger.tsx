@@ -30,23 +30,22 @@ const Hamburger = () => {
   ];
 
   return (
-    <VStack spacing={3} w="100%" h="100%" position="fixed" display="flex">
+    <VStack spacing={3} position="fixed" align="flex-start">
       <IconButton
         onClick={onToggle}
         size="md"
         fontSize="lg"
         icon={<SwitchIcon />}
         variant="ghost"
-        color="current"
         backgroundColor="brand.250"
         textColor={useColorModeValue("brand.400", "offwhite")}
         _hover={{ bg: useColorModeValue("brand.200", "brand.300") }}
         aria-label={`Open Hamburger Menu`}
-        marginBottom="2vh"
+        marginBottom="1vh"
       />
       <Box>
         <Collapse in={isOpen} animateOpacity>
-          <DropDownMenu location={locations} />
+          <DropDownMenu location={locations} onToggle={onToggle} />
         </Collapse>
       </Box>
     </VStack>
