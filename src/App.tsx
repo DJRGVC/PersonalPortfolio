@@ -9,6 +9,7 @@ import ContactMe from "./components/ContactMe";
 import Background from "./components/Background";
 
 const colors = {
+  initialColorMode: "dark",
   brand: {
     100: "#cdd4db",
     200: "#a2b4c3",
