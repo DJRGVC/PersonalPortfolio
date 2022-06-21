@@ -14,7 +14,7 @@ import ContactMe from "./components/ContactMe";
 import Background from "./components/Background";
 
 const config: ThemeConfig = {
-  initialColorMode: "light",
+  initialColorMode: "dark",
   useSystemColorMode: false,
 };
 
