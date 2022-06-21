@@ -1,8 +1,9 @@
 import { Box, Flex, useColorModeValue, VStack } from "@chakra-ui/react";
+import React from "react";
 import DropDownIcon from "./DropDownIcon";
 import { Destination } from "./Hamburger";
 
-const DropDownMenu: React.FC<Destination> = ({ location }) => {
+const DropDownMenu: React.FC<any> = ({ location, onToggle }) => {
   return (
     <Box
       h="fit-content"
@@ -14,8 +15,14 @@ const DropDownMenu: React.FC<Destination> = ({ location }) => {
       justifyContent="center"
     >
       <VStack>
-        {location.map((place) => {
-          return <DropDownIcon name={place.name} address={place.address} />;
+        {location.map((place: { name: string; address: string }) => {
+          return (
+            <DropDownIcon
+              name={place.name}
+              address={place.address}
+              onToggle={onToggle}
+            />
+          );
         })}
       </VStack>
     </Box>
