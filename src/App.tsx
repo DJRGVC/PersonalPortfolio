@@ -1,4 +1,9 @@
-import { ChakraProvider, extendTheme, VStack } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  extendTheme,
+  VStack,
+  ThemeConfig,
+} from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import LandingPage from "./components/LandingPage";
@@ -7,6 +12,11 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import ContactMe from "./components/ContactMe";
 import Background from "./components/Background";
+
+const config: ThemeConfig = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
 
 const colors = {
   initialColorMode: "dark",
@@ -39,7 +49,7 @@ export interface IPages {
   }[];
 }
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({ colors, config });
 
 export const App = () => {
   return (
