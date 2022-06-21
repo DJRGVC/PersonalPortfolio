@@ -1,14 +1,12 @@
-import React, { createRef, Ref, useLayoutEffect, useRef } from "react";
-import {
-  Box,
-  Button,
-  ChakraProvider,
-  extendTheme,
-  VStack,
-} from "@chakra-ui/react";
+import { ChakraProvider, extendTheme, VStack } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import LandingPage from "./components/LandingPage";
+import { mode } from "@chakra-ui/theme-tools";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
+import ContactMe from "./components/ContactMe";
+import Background from "./components/Background";
 
 const colors = {
   brand: {
@@ -23,13 +21,14 @@ const colors = {
     1100: "#FF681F",
     1200: "#FF9F00",
     1300: "#F6D12E",
+    1400: "white",
   },
   styles: {
-    global: {
+    global: () => ({
       body: {
-        background: "blue",
+        bg: mode("#F6D12E", "#F6D12E"),
       },
-    },
+    }),
   },
 };
 
@@ -44,6 +43,7 @@ const theme = extendTheme({ colors });
 export const App = () => {
   return (
     <ChakraProvider theme={theme}>
+      <Background />
       <NavBar />
       <VStack spacing={4} align="center">
         <div id="landing-page">
@@ -53,13 +53,13 @@ export const App = () => {
           <AboutMe />
         </div>
         <div id="education">
-          <AboutMe />
+          <Education />
         </div>
         <div id="skills">
-          <AboutMe />
+          <Skills />
         </div>
         <div id="contact-me">
-          <AboutMe />
+          <ContactMe />
         </div>
       </VStack>
     </ChakraProvider>
