@@ -1,6 +1,5 @@
 import {
   Box,
-  Divider,
   HStack,
   IconButton,
   Link,

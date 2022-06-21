@@ -1,7 +1,6 @@
-import { Box, Flex, useColorModeValue, VStack } from "@chakra-ui/react";
+import { Box, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
 import DropDownIcon from "./DropDownIcon";
-import { Destination } from "./Hamburger";
 
 const DropDownMenu: React.FC<any> = ({ location, onToggle }) => {
   return (
