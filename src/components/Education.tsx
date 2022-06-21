@@ -110,7 +110,7 @@ const Education = () => {
                   >
                     <Text
                       textAlign="center"
-                      w={{ base: "80vw", md: "60vw", lg: "50vw" }}
+                      w={{ base: "80vw", md: "30vw", lg: "50vw" }}
                       backgroundColor={useColorModeValue(
                         "brand.350",
                         "brand.200"
