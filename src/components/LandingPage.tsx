@@ -1,17 +1,25 @@
-import { Box, Center, Image, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Hide,
+  Image,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 import MeAndChloe from "./Images/MeAndChloe.jpg";
+import MeAndChloeBig from "./Images/MeAndChloeBig.jpg";
 
 const LandingPage = () => {
   return (
     <Box
       bg={useColorModeValue("brand.300", "brand.100")}
-      w="95%"
+      w="95vw"
       borderRadius={10}
       color="white"
       marginLeft="auto"
       marginRight="auto"
-      marginTop={91}
+      marginTop="12vh"
     >
       <Center textAlign="center">
         <Text
@@ -30,7 +38,17 @@ const LandingPage = () => {
           Hi There! I'm Daniel Grant.
         </Text>
       </Center>
-      <Image borderRadius={10} src={MeAndChloe} width="100%" height="auto" />
+      <Hide below="md">
+        <Image
+          borderRadius={10}
+          src={MeAndChloeBig}
+          width="100%"
+          height="auto"
+        />
+      </Hide>
+      <Hide above="md">
+        <Image borderRadius={10} src={MeAndChloe} width="100%" height="auto" />
+      </Hide>
     </Box>
   );
 };
