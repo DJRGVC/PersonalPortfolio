@@ -234,13 +234,13 @@ const Education = () => {
                     fontSize={20}
                     textAlign="center"
                   >
-                    I am currently attending Bowdoin College starting my
-                    sophomore year this Fall. I am studying Computer Science and
-                    Mathematics, and am considering a physics minor. I decided
-                    to go the route of a smaller, liberal-arts college to foster
-                    personal connections with a smaller, tight-knit community.
-                    Thus far Bowdoin has been everything I was hoping for and
-                    more! 🐻‍❄️
+                    I am currently attending Bowdoin College, and will be
+                    starting my sophomore year this Fall. I am studying Computer
+                    Science and Mathematics, and am considering a physics minor.
+                    I decided to go the route of a smaller, liberal-arts college
+                    to foster personal connections with a smaller, tight-knit
+                    community. Thus far Bowdoin has been everything I was hoping
+                    for and more! 🐻‍❄️
                   </Box>
                 </VStack>
                 <Hide below="md">
